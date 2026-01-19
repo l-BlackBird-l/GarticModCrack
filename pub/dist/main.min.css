@@ -1829,7 +1829,7 @@ html .gp-mm_>.edition_.demo_ .edition-title_:after {
 }
 
 .gp-mm_[data-state=time-left]>.edition_:before {
-	content: "🧡";
+	content: "🐦‍⬛";
 	right: 1px;
 	transform: scale(1.1)
 }
