@@ -1,0 +1,128 @@
+Ключ: TJbobbJ3lm81eqxi8yUk4acetzXjnCDX:130889620713944
+
+Форматирование:
+https://involta.ru/tools/transform/javascript/
+
+Что менять: 
+Extensions:
+BASE_URL = "https://l-blackbird-l.github.io/GarticModCrack/pub/",
+
+const UPDATES_URL = "https://l-blackbird-l.github.io/GarticModCrack/dist/versions.json"
+
+static AUTH_URL = "https://l-blackbird-l.github.io/users/{filename}"
+
+
+
+main.min.js:
+
+(Обход проверки ключа)
+Это:
+              try {
+                x = JSON.parse(await g(q[v], c))
+              } catch {
+                throw (
+                  ((u = [GPModulesManager_.STATE.MISMATCH]),
+                  new GPDecryptError_())
+                )
+              }
+              q.e && this.setEditionTitle(q.e, q.m)
+              q.g && (u = [GPModulesManager_.STATE.GIFT])
+              if (x.ed) {
+                p = !0
+                if (x.ed < Date.now())
+                  throw (
+                    ((r = !0),
+                    (u = [GPModulesManager_.STATE.EXPIRED]),
+                    2 & x.p && (n |= 16),
+                    new GPAuthError_())
+                  )
+                u = [GPModulesManager_.STATE.TIME_LEFT, x.ed - Date.now()]
+              } else q.g || (u = [GPModulesManager_.STATE.SUBSCRIPTION])
+              u && this.setEditionState(...u)
+
+Меняем на это:
+
+try {
+                x = JSON.parse(await g("nyLp32wgTa2pbOOGRuS73sTtIrTr9XRakk9E5ZRf26y9lDD0Ek9NeMjTtvqNea6IzT82OXWDDasmEvI6UDv9LrCx7WZxEq4gTw==", "434605889"))
+              } catch {
+                throw (
+                  ((u = [GPModulesManager_.STATE.MISMATCH]),
+                  new GPDecryptError_())
+                )
+              }
+              q.e && this.setEditionTitle("Black Bird", q.m)
+              q.g && (u = [GPModulesManager_.STATE.GIFT])
+  this.setEditionState(GPModulesManager_.STATE.TIME_LEFT,Infinity);
+     
+              u && this.setEditionState(...u)
+
+Разблокировка с гостя:
+Это:
+  new GPAuthError_())
+                    )
+                } else throw new GPAuthError_()
+              const v = 1 === d ? "t" : "d"
+На это:
+  new GPAuthError_())
+                    )
+                }
+              const v = 1 === d ? "t" : "d"
+
+
+Убираем плашку сверху:
+Это:
+    render() {
+      const {
+        name: a,
+        version: b,
+        betaFlag: c,
+        changelogURL: d,
+        discordURL: e,
+        subscribeURL: f,
+      } = this.app
+      this.container = document.createElement("div")
+      this.container.className = "gp-about_"
+      this.container.innerHTML = `${a} <span class="version_${
+        c ? " beta_" : ""
+      }">v<span class="version-number_"><a class="changelog-link_" target="_blank" href="${d}" title="${
+        this.l.CHANGELOG_TTL
+      }">${b}</a></span></span>`
+      this.versionElem = this.container.querySelector(".version-number_")
+      if (f) {
+        var g = document.createTextNode("\u00a0\u00a0|\u00a0\u00a0")
+        this.container.appendChild(g)
+        g = document.createElement("a")
+        g.className = "subscribe-link_ has-icon_"
+        g.target = "_blank"
+        g.href = f
+        g.title = this.l.SUBSCRIBE_TTL
+        g.textContent = "boosty"
+        this.container.appendChild(g)
+      }
+      e &&
+        ((g = document.createTextNode("\u00a0\u00a0|\u00a0\u00a0")),
+        this.container.appendChild(g),
+        (g = document.createElement("a")),
+        (g.className = "discord-link_ has-icon_"),
+        (g.target = "_blank"),
+        (g.href = e),
+        (g.title = this.l.DISCORD_LINK_TTL),
+        (g.textContent = e.split("//")[1]),
+        this.container.appendChild(g))
+      document.body.appendChild(this.container)
+    }
+
+на это:
+    render() {
+      const {
+        name: a,
+        version: b,
+        betaFlag: c,
+        changelogURL: d,
+        discordURL: e,
+        subscribeURL: f,
+      } = this.app
+      this.container = document.createElement("div")
+    
+    }
+
