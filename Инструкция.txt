@@ -58,15 +58,14 @@ try {
 
 Разблокировка с гостя:
 Это:
-  new GPAuthError_())
-                    )
-                } else throw new GPAuthError_()
-              const v = 1 === d ? "t" : "d"
+              if (!d)
+                if (this.s.twitchAuth) {
+                  d = 1
 На это:
-  new GPAuthError_())
-                    )
-                }
-              const v = 1 === d ? "t" : "d"
+ d = 1
+              if (!d)
+                if (this.s.twitchAuth) {
+                  d = 1
 
 
 Убираем плашку сверху:
